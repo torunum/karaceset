@@ -1,0 +1,240 @@
+[
+  {
+    "file": "shotgun-0.ogg",
+    "source": "firearms/Prepared SFX Library/Mossberg/N_26P.wav",
+    "start": 0.78,
+    "duration": 1.35,
+    "filters": "aformat=channel_layouts=mono,afade=t=out:st=1.15:d=0.2,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "shotgun-1.ogg",
+    "source": "firearms/Prepared SFX Library/Mossberg/N_26P.wav",
+    "start": 4.57,
+    "duration": 1.35,
+    "filters": "aformat=channel_layouts=mono,afade=t=out:st=1.15:d=0.2,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "shotgun-2.ogg",
+    "source": "firearms/Prepared SFX Library/Mossberg/N_26P.wav",
+    "start": 7.94,
+    "duration": 1.35,
+    "filters": "aformat=channel_layouts=mono,afade=t=out:st=1.15:d=0.2,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "cult-shot.ogg",
+    "source": "firearms/Prepared SFX Library/1911/A_34P.wav",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,silenceremove=start_periods=1:start_threshold=-30dB,atrim=duration=1.1,afade=t=out:st=0.9:d=0.2,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "step-0.ogg",
+    "source": "impact/Audio/footstep_concrete_000.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "step-1.ogg",
+    "source": "impact/Audio/footstep_concrete_001.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "step-2.ogg",
+    "source": "impact/Audio/footstep_concrete_002.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "step-3.ogg",
+    "source": "impact/Audio/footstep_concrete_003.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "punch-0.ogg",
+    "source": "impact/Audio/impactPunch_heavy_000.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "wood-0.ogg",
+    "source": "impact/Audio/impactWood_heavy_000.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "metal-0.ogg",
+    "source": "impact/Audio/impactMetal_heavy_000.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "stone-0.ogg",
+    "source": "impact/Audio/impactPlate_heavy_000.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "slime-0.ogg",
+    "source": "slime/slime_01.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "punch-1.ogg",
+    "source": "impact/Audio/impactPunch_heavy_001.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "wood-1.ogg",
+    "source": "impact/Audio/impactWood_heavy_001.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "metal-1.ogg",
+    "source": "impact/Audio/impactMetal_heavy_001.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "stone-1.ogg",
+    "source": "impact/Audio/impactPlate_heavy_001.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "slime-1.ogg",
+    "source": "slime/slime_02.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "punch-2.ogg",
+    "source": "impact/Audio/impactPunch_heavy_002.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "wood-2.ogg",
+    "source": "impact/Audio/impactWood_heavy_002.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "metal-2.ogg",
+    "source": "impact/Audio/impactMetal_heavy_002.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "stone-2.ogg",
+    "source": "impact/Audio/impactPlate_heavy_002.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "slime-2.ogg",
+    "source": "slime/slime_03.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "bone.ogg",
+    "source": "impact/Audio/impactMining_000.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "cloth.ogg",
+    "source": "impact/Audio/impactSoft_medium_000.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "reload.ogg",
+    "source": "reload/ShotgunSounds/Rack.mp3",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,silenceremove=start_periods=1:start_threshold=-40dB,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "shell.ogg",
+    "source": "reload/ShotgunSounds/First Shell.mp3",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,silenceremove=start_periods=1:start_threshold=-40dB,highpass=f=40,alimiter=limit=0.75:level=false,atrim=duration=0.65,afade=t=out:st=0.55:d=0.1"
+  },
+  {
+    "file": "monster-0.ogg",
+    "source": "enemy.ogg",
+    "start": 0,
+    "duration": 1.2,
+    "filters": "aformat=channel_layouts=mono,afade=t=in:d=0.005,afade=t=out:st=1.15:d=0.05,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "monster-1.ogg",
+    "source": "enemy.ogg",
+    "start": 1.32,
+    "duration": 1.2,
+    "filters": "aformat=channel_layouts=mono,afade=t=in:d=0.005,afade=t=out:st=1.15:d=0.05,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "monster-2.ogg",
+    "source": "enemy.ogg",
+    "start": 2.9,
+    "duration": 0.7,
+    "filters": "aformat=channel_layouts=mono,afade=t=in:d=0.005,afade=t=out:st=0.6499999999999999:d=0.05,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "monster-3.ogg",
+    "source": "enemy.ogg",
+    "start": 6.4,
+    "duration": 0.85,
+    "filters": "aformat=channel_layouts=mono,afade=t=in:d=0.005,afade=t=out:st=0.7999999999999999:d=0.05,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "monster-4.ogg",
+    "source": "enemy.ogg",
+    "start": 7.56,
+    "duration": 1.25,
+    "filters": "aformat=channel_layouts=mono,afade=t=in:d=0.005,afade=t=out:st=1.2:d=0.05,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "monster-5.ogg",
+    "source": "enemy.ogg",
+    "start": 9.1,
+    "duration": 1.6,
+    "filters": "aformat=channel_layouts=mono,afade=t=in:d=0.005,afade=t=out:st=1.55:d=0.05,highpass=f=40,alimiter=limit=0.75:level=false"
+  },
+  {
+    "file": "wet-room.ogg",
+    "source": "slime/loop_bubbles_1.ogg",
+    "start": 0,
+    "duration": null,
+    "filters": "aformat=channel_layouts=mono,lowpass=f=700,highpass=f=40,alimiter=limit=0.75:level=false"
+  }
+]

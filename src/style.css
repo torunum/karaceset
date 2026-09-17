@@ -1,0 +1,799 @@
+:root {
+  font-family: "Barlow", Arial, sans-serif;
+  color: #e9dfca;
+  background: #180e16;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #eee0b5;
+  outline-offset: 5px;
+}
+[hidden] {
+  display: none !important;
+}
+#game {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+#vignette,
+#damage,
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+#vignette {
+  background: radial-gradient(
+    ellipse at 55% 45%,
+    transparent 28%,
+    #100a1440 65%,
+    #100a14b0 100%
+  );
+}
+#damage {
+  background: radial-gradient(ellipse, transparent 30%, #b41531);
+  opacity: 0;
+}
+.grain {
+  opacity: 0.045;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 2px,
+    #17111c 3px,
+    transparent 4px
+  );
+  mix-blend-mode: overlay;
+}
+#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 94px;
+  padding: 0 4.4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #c9a8a31f;
+  z-index: 3;
+  background: linear-gradient(#130b1580, transparent);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  color: #e0d4bf;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+.brand svg {
+  height: 32px;
+  width: 28px;
+  color: #b77567;
+}
+.chapter {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: #b6a99f;
+}
+.chapter span {
+  padding: 0 16px;
+  color: #906158;
+}
+#pause {
+  background: transparent;
+  color: #e0d4bf;
+  border: 0;
+  font-size: 20px;
+}
+#pause span {
+  font-size: 10px;
+  margin-left: 14px;
+  color: #b5a399;
+}
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #140c17ed 0%,
+    #140c17c7 34%,
+    #140c1745 62%,
+    #140c1750
+  );
+  padding: 126px 7.3% 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-copy {
+  width: 530px;
+  max-width: 60vw;
+  position: relative;
+}
+.overline {
+  font-size: 10px;
+  letter-spacing: 2.2px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #c9b6a8;
+}
+.overline i,
+.menu-meta i {
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  background: #b68e62;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #dc9c70;
+}
+.overline span {
+  color: #a97567;
+}
+h1 {
+  font-family: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  line-height: 0.82;
+  font-size: clamp(84px, 9.8vw, 160px);
+  letter-spacing: -2px;
+  font-weight: 800;
+  margin: 33px 0 30px;
+  position: relative;
+  text-shadow: 0 4px 25px #0004;
+}
+h1 em {
+  font-style: normal;
+  color: #b77063;
+}
+.title-rule {
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  width: 44px;
+  background: #b77063;
+  bottom: 9px;
+  margin-left: 23px;
+}
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.subtitle > span {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.subtitle small {
+  color: #8e7a78;
+  font-size: 9px;
+  letter-spacing: 2.7px;
+}
+#description {
+  color: #b7a6a1;
+  font-size: 13px;
+  line-height: 1.85;
+  margin: 25px 0 26px;
+}
+.primary {
+  width: 292px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #c78b78;
+  background: #b77b69;
+  color: #1f111a;
+  padding: 18px 23px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+.primary:hover {
+  background: #d29a83;
+}
+.primary b {
+  font: 24px Arial;
+}
+.menu-meta {
+  display: flex;
+  gap: 22px;
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  margin-top: 17px;
+  color: #977e77;
+}
+.menu-meta i {
+  margin-right: 5px;
+  width: 4px;
+  height: 4px;
+}
+.field-note {
+  align-self: flex-end;
+  margin-bottom: 35px;
+  border-left: 1px solid #cbb19b40;
+  padding-left: 24px;
+  width: 242px;
+  position: relative;
+}
+.eyebrow {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #ab9082;
+}
+.field-note h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  margin: 18px 0 12px;
+}
+.field-note p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #ae9892;
+}
+.note-line {
+  width: 30px;
+  border-top: 1px solid #b98670;
+  margin: 23px 0 16px;
+}
+.field-note > .eyebrow:last-child {
+  font-size: 8px;
+  letter-spacing: 1.1px;
+}
+.bone-mark {
+  font-family: serif;
+  font-size: 64px;
+  color: #d1b79a;
+  height: 65px;
+  padding-left: 15px;
+  transform: rotate(15deg);
+}
+.menu-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 4.4%;
+  width: 91.2%;
+  height: 86px;
+  border-top: 1px solid #c9a8a328;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls {
+  display: flex;
+  gap: 23px;
+}
+.controls > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #978582;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+}
+kbd {
+  color: #d7c5b6;
+  border: 1px solid #a68f7b50;
+  padding: 5px 6px;
+  font:
+    9px "Barlow",
+    sans-serif;
+  letter-spacing: 1px;
+  border-radius: 2px;
+}
+#settings-toggle {
+  background: transparent;
+  border: 0;
+  color: #bfa89a;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+#settings-toggle span {
+  margin-left: 14px;
+}
+#settings {
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  position: absolute;
+  right: 5%;
+  bottom: 110px;
+  width: 320px;
+  padding: 25px;
+  background: #20151fee;
+  border: 1px solid #b985704f;
+  backdrop-filter: blur(15px);
+}
+#settings h2 {
+  font-family: "Barlow Condensed";
+  font-weight: 500;
+}
+#settings label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 12px;
+}
+#settings input {
+  width: 130px;
+  accent-color: #bd7e69;
+}
+#settings select {
+  background: #281b29;
+  color: #dfcbb2;
+  border: 1px solid #8d6955;
+  padding: 6px;
+}
+#settings p {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #ad9990;
+}
+#settings-close {
+  background: transparent;
+  border: 1px solid #977866;
+  color: #ddc5af;
+  padding: 8px 14px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+#hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+.mission {
+  position: absolute;
+  left: 4.5%;
+  top: 126px;
+}
+.mission p {
+  font-size: 12px;
+  color: #e0cbbb;
+  margin-top: 9px;
+  text-shadow: 0 2px 5px #000;
+}
+.status {
+  position: absolute;
+  bottom: 44px;
+  left: 4.4%;
+  width: 91.2%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.readout {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.readout strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 58px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.unit {
+  color: #a49385;
+  font-size: 13px;
+}
+.heart {
+  color: #b56e67;
+  font-size: 25px;
+}
+.health-track {
+  height: 3px;
+  width: 178px;
+  background: #b7a38c33;
+  margin-top: 5px;
+}
+.health-track i {
+  display: block;
+  background: #ae665e;
+  height: 100%;
+  transition: width 0.2s;
+}
+.weapon-label {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-bottom: 2px;
+}
+.weapon-label strong {
+  font-family: "Barlow Condensed";
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+.weapon-label > span:last-child {
+  font-size: 8px;
+  color: #b1998a;
+  letter-spacing: 1.8px;
+}
+.ammo {
+  text-align: right;
+  min-width: 178px;
+}
+.ammo .readout {
+  justify-content: flex-end;
+}
+.ammo-marks {
+  letter-spacing: 5px;
+  color: #b69472;
+  font-size: 10px;
+}
+.stats-mini {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8px;
+  letter-spacing: 1.7px;
+  color: #988577;
+  white-space: nowrap;
+}
+.stats-mini span {
+  color: #ddc7ae;
+}
+.stats-mini b {
+  padding: 0 15px;
+}
+#crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translate(-50%, -50%);
+}
+#crosshair i {
+  position: absolute;
+  background: #e5d7b0;
+  box-shadow: 0 0 3px #100b13;
+  width: 5px;
+  height: 1px;
+  top: 10px;
+}
+#crosshair i:nth-child(1) {
+  left: 0;
+}
+#crosshair i:nth-child(2) {
+  right: 0;
+}
+#crosshair i:nth-child(3) {
+  left: 10px;
+  top: 0;
+  width: 1px;
+  height: 5px;
+}
+#crosshair i:nth-child(4) {
+  left: 10px;
+  top: 17px;
+  width: 1px;
+  height: 5px;
+}
+#crosshair.hit {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+#crosshair.hit i {
+  background: #e56b64;
+}
+#crosshair.reloading {
+  opacity: 0.45;
+}
+#notice {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Barlow Condensed";
+  font-size: 17px;
+  color: #eed6ad;
+  letter-spacing: 1.7px;
+  text-align: center;
+  text-shadow: 0 2px 8px #000;
+}
+#interaction {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #f0dcaa;
+  background: #201520c0;
+  padding: 12px 18px;
+  border-bottom: 1px solid #c2a46d;
+}
+#interaction:empty {
+  display: none;
+}
+#loading {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  background: #150f18;
+  color: #b99780;
+  font-size: 16px;
+  letter-spacing: 3px;
+  z-index: 20;
+}
+@media (max-height: 760px) {
+  #overlay {
+    padding-top: 106px;
+  }
+  .overline {
+    font-size: 8px;
+  }
+  h1 {
+    font-size: clamp(72px, 8.6vw, 124px);
+    margin: 22px 0;
+  }
+  .subtitle > span {
+    font-size: 18px;
+  }
+  #description {
+    margin: 16px 0 20px;
+  }
+  .primary {
+    padding: 13px 22px;
+  }
+  .menu-bottom {
+    height: 66px;
+  }
+  .field-note {
+    margin-bottom: 5px;
+  }
+  #top {
+    height: 77px;
+  }
+}
+@media (max-width: 900px) {
+  .field-note {
+    display: none;
+  }
+  .menu-copy {
+    max-width: 90vw;
+  }
+  .controls {
+    gap: 10px;
+  }
+  .controls > span {
+    font-size: 0;
+    gap: 0;
+  }
+  .chapter {
+    font-size: 8px;
+  }
+  .weapon-label {
+    display: none;
+  }
+  .readout strong {
+    font-size: 44px;
+  }
+  .mission {
+    top: 100px;
+  }
+  .brand {
+    font-size: 16px;
+  }
+  .menu-bottom {
+    left: 7%;
+    width: 86%;
+  }
+  .health-track {
+    width: 130px;
+  }
+  .ammo {
+    min-width: 130px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+  .grain {
+    display: none;
+  }
+}
+/* A fixed, weathered status panel keeps combat information together. */
+#hud .status {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 116px;
+  padding: 12px 4.4% 22px;
+  border-top: 3px solid #71654b;
+  background: linear-gradient(100deg, #252720f2, #171c17f7 50%, #292720f5);
+  box-shadow:
+    0 -2px 0 #14100d,
+    0 -15px 32px #0004;
+  align-items: center;
+}
+#hud .status::before {
+  content: "";
+  position: absolute;
+  inset: 4px 8px;
+  pointer-events: none;
+  border: 1px solid #7467503d;
+}
+#hud .readout strong {
+  font-size: 48px;
+  color: #d4c799;
+}
+#hud .weapon-label {
+  gap: 5px;
+}
+#hud .weapon-label strong {
+  font-size: 13px;
+  letter-spacing: 1.8px;
+}
+#hud .stats-mini {
+  bottom: 6px;
+  font-size: 8px;
+  z-index: 1;
+}
+.weapon-slots {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 3px;
+}
+.weapon-slots > span {
+  font:
+    11px "Barlow Condensed",
+    sans-serif;
+  letter-spacing: 1.5px;
+  border: 1px solid #746d4f50;
+  background: #10151180;
+  padding: 7px 17px;
+  color: #898575;
+}
+.weapon-slots b {
+  font-size: 14px;
+  margin-right: 8px;
+}
+.weapon-slots .active {
+  border-color: #b4a56c;
+  color: #e1d39e;
+  background: #62664444;
+  box-shadow: inset 0 0 12px #92984b20;
+}
+.weapon-slots .locked {
+  opacity: .42;
+  border-style: dashed;
+}
+.weapon-slots .locked::after {
+  content: ' · KİLİTLİ';
+  font-size: 8px;
+  letter-spacing: .5px;
+}
+#difficulty-control {
+  display: grid;
+  gap: 5px;
+  max-width: 340px;
+  margin: 0 0 14px;
+}
+#difficulty-control[hidden] { display: none; }
+#difficulty-control label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #b8a477;
+}
+#difficulty {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #78664b;
+  background: #171814;
+  color: #dfd5bb;
+  font: 14px 'Barlow', sans-serif;
+}
+#difficulty:disabled { opacity: .5; }
+#difficulty-note { color: #938a78; font-size: 11px; }
+#kick-hint {
+  letter-spacing: 1.6px;
+  font-size: 9px;
+  color: #bdb18b;
+}
+#hud .mission {
+  top: 112px;
+}
+#hud .health-track {
+  width: 160px;
+}
+#hud .heart {
+  color: #8f4035;
+}
+#game {
+  image-rendering: auto;
+}
+#top {
+  height: 78px;
+}
+.field-note {
+  background: #120d10a0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 16px;
+}
+@media (max-width: 900px) {
+  #hud .status {
+    height: 105px;
+  }
+  .weapon-slots > span {
+    padding: 5px 8px;
+  }
+  #hud .weapon-label {
+    display: flex;
+  }
+  #hud .weapon-label strong,
+  #hud #reload {
+    display: none;
+  }
+  #hud .ammo,
+  #hud .vital {
+    min-width: 100px;
+  }
+  #hud .health-track {
+    width: 100px;
+  }
+}
+@media (max-height: 700px) {
+  #hud .status {
+    height: 95px;
+  }
+  #hud .readout strong {
+    font-size: 38px;
+  }
+  #hud .mission {
+    top: 95px;
+  }
+}
+
+.chapter-link {
+  display: block;
+  width: fit-content;
+  margin-top: 16px;
+  color: #c3b38b;
+  font:
+    600 12px Barlow,
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  border-bottom: 1px solid #695b42;
+  padding-bottom: 5px;
+}
+.chapter-link:hover {
+  color: #f2dfb4;
+}
+#power-status { position: fixed; left: 3.5%; top: 160px; color: #e3ac73; font: 600 13px "Barlow Condensed", sans-serif; letter-spacing: 1px; pointer-events: none; }

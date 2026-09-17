@@ -1,0 +1,12 @@
+node_modules/
+dist/
+test-results/
+*.log
+docs/reference/
+*.blend1
+*.blend2
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
